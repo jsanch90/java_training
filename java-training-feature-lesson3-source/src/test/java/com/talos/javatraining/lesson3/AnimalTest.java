@@ -125,6 +125,7 @@ public class AnimalTest
 				assertTrue(clazz.getName() + " : " + ex.getMessage(), false);
 			}
 		}
+
 		Map<String, String[]> expectations = createExpectations();
 		ANIMAL_INSTANCES.forEach(a -> checkCharacteristics(a, expectations.get(a.getName())));
 	}
