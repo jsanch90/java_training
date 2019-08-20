@@ -1,4 +1,4 @@
-package com.talos.javatraining.lesson5.data;
+package com.talos.javatraining.lesson6.data;
 
 public class ProductData
 {
@@ -43,5 +43,24 @@ public class ProductData
 				"code='" + code + '\'' +
 				", price=" + price +
 				'}';
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+			return true;
+		if (o == null || getClass() != o.getClass())
+			return false;
+
+		ProductData that = (ProductData) o;
+
+		return getCode().equals(that.getCode());
+	}
+
+	@Override
+	public int hashCode()
+	{
+		return getCode().hashCode();
 	}
 }

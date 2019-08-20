@@ -1,4 +1,4 @@
-package com.talos.javatraining.lesson5.data;
+package com.talos.javatraining.lesson6.data;
 
 public class OrderEntryData
 {
@@ -51,10 +51,11 @@ public class OrderEntryData
 	public String toString()
 	{
 		return "OrderEntryData{" +
-				"entryNumber=" + entryNumber +
-				", quantity=" + quantity +
-				", product=" + product +
-				", basePrice=" + basePrice +
+				+ entryNumber +
+				", qty=" + quantity +
+				", product=" + product.getCode() +
+				", basePrice=" + basePrice.getValue() +
+				" " + basePrice.getCurrencyIso() +
 				'}';
 	}
 }

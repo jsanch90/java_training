@@ -1,6 +1,6 @@
-package com.talos.javatraining.lesson5;
+package com.talos.javatraining.lesson6.data.builders;
 
-import com.talos.javatraining.lesson5.data.PriceData;
+import com.talos.javatraining.lesson6.data.PriceData;
 import java.math.BigDecimal;
 import static java.math.BigDecimal.ZERO;
 import static java.util.Optional.ofNullable;

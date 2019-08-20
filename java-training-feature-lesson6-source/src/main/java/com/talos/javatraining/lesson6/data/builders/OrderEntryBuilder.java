@@ -1,8 +1,8 @@
-package com.talos.javatraining.lesson5;
+package com.talos.javatraining.lesson6.data.builders;
 
-import com.talos.javatraining.lesson5.data.OrderEntryData;
-import com.talos.javatraining.lesson5.data.PriceData;
-import com.talos.javatraining.lesson5.data.ProductData;
+import com.talos.javatraining.lesson6.data.OrderEntryData;
+import com.talos.javatraining.lesson6.data.PriceData;
+import com.talos.javatraining.lesson6.data.ProductData;
 import java.math.BigDecimal;
 
 

@@ -1,4 +1,4 @@
-package com.talos.javatraining.lesson5.data;
+package com.talos.javatraining.lesson6.data;
 
 import java.math.BigDecimal;
 
