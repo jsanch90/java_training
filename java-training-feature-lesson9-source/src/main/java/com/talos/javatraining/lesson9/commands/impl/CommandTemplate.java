@@ -4,24 +4,24 @@ import com.talos.javatraining.lesson9.commands.AppCommand;
 import com.talos.javatraining.lesson9.events.EventBus;
 import com.talos.javatraining.lesson9.events.EventType;
 
+import java.util.function.Supplier;
 
-public abstract class CommandTemplate implements AppCommand
-{
 
-	private String[] args;
-	private EventBus eventBus;
+public class CommandTemplate implements AppCommand {
 
-	public CommandTemplate(EventBus eventBus, String... args)
-	{
-		this.args = args;
-		this.eventBus = eventBus;
-	}
+    private String[] args;
+    private EventBus eventBus;
+    private Supplier<EventType> op;
 
-	@Override
-	public void execute()
-	{
-		eventBus.notify(getEvent(), args);
-	}
+    public CommandTemplate(EventBus eventBus, Supplier<EventType> op, String... args) {
+        this.args = args;
+        this.eventBus = eventBus;
+        this.op = op;
+    }
 
-	public abstract EventType getEvent();
+    @Override
+    public void execute() {
+        eventBus.notify(op.get(), args);
+    }
+
 }
